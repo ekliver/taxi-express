@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @driver.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @driver.apellido %>
+</p>
+
+<p>
+  <strong>Dni:</strong>
+  <%= @driver.dni %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @driver.sexo %>
+</p>
+
+<p>
+  <strong>Formapago:</strong>
+  <%= @driver.formapago %>
+</p>
+
+<p>
+  <strong>Licencia:</strong>
+  <%= @driver.licencia %>
+</p>
+
+<p>
+  <strong>Tarjeta:</strong>
+  <%= @driver.tarjeta %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @driver.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @driver.password %>
+</p>
+
+<%= link_to 'Edit', edit_driver_path(@driver) %> |
+<%= link_to 'Back', drivers_path %>

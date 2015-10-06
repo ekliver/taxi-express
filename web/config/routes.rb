@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :vehicles
+  resources :requests
+  resources :drivers
+  resources :passengers
   devise_for :users
   get 'wellcome/index'
   root 'wellcome#index'

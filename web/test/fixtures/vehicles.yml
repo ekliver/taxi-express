@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  marca: MyString
+  modelo: MyString
+  ano: MyString
+  color: MyString
+  pasajeros: MyString
+  tipo: MyString
+  passenger_id: 
+
+two:
+  marca: MyString
+  modelo: MyString
+  ano: MyString
+  color: MyString
+  pasajeros: MyString
+  tipo: MyString
+  passenger_id: 

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  passenger_id: 
+  distini: MyString
+  distfin: MyString
+  monto: 1
+  direcexini: MyString
+  directexfin: MyString
+  pasajeros: 1
+  tipovehiculo: MyString
+  tipopago: MyString
+  estado: MyString
+
+two:
+  passenger_id: 
+  distini: MyString
+  distfin: MyString
+  monto: 1
+  direcexini: MyString
+  directexfin: MyString
+  pasajeros: 1
+  tipovehiculo: MyString
+  tipopago: MyString
+  estado: MyString

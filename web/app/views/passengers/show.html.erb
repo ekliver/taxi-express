@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @passenger.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @passenger.apellido %>
+</p>
+
+<p>
+  <strong>Dni:</strong>
+  <%= @passenger.dni %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @passenger.sexo %>
+</p>
+
+<p>
+  <strong>Formapago:</strong>
+  <%= @passenger.formapago %>
+</p>
+
+<p>
+  <strong>Tarjeta:</strong>
+  <%= @passenger.tarjeta %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @passenger.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @passenger.password %>
+</p>
+
+<%= link_to 'Edit', edit_passenger_path(@passenger) %> |
+<%= link_to 'Back', passengers_path %>
