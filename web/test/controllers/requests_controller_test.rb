@@ -18,7 +18,7 @@ class RequestsControllerTest < ActionController::TestCase
 
   test "should create request" do
     assert_difference('Request.count') do
-      post :create, request: { direcexini: @request.direcexini, directexfin: @request.directexfin, distfin: @request.distfin, distini: @request.distini, estado: @request.estado, monto: @request.monto, pasajeros: @request.pasajeros, passenger_id: @request.passenger_id, tipopago: @request.tipopago, tipovehiculo: @request.tipovehiculo }
+      post :create, request: { calif: @request.calif, direcfin: @request.direcfin, direcini: @request.direcini, driver_id: @request.driver_id, estado: @request.estado, fpago: @request.fpago, npass: @request.npass, passenger_id: @request.passenger_id, route_id: @request.route_id }
     end
 
     assert_redirected_to request_path(assigns(:request))
@@ -35,7 +35,7 @@ class RequestsControllerTest < ActionController::TestCase
   end
 
   test "should update request" do
-    patch :update, id: @request, request: { direcexini: @request.direcexini, directexfin: @request.directexfin, distfin: @request.distfin, distini: @request.distini, estado: @request.estado, monto: @request.monto, pasajeros: @request.pasajeros, passenger_id: @request.passenger_id, tipopago: @request.tipopago, tipovehiculo: @request.tipovehiculo }
+    patch :update, id: @request, request: { calif: @request.calif, direcfin: @request.direcfin, direcini: @request.direcini, driver_id: @request.driver_id, estado: @request.estado, fpago: @request.fpago, npass: @request.npass, passenger_id: @request.passenger_id, route_id: @request.route_id }
     assert_redirected_to request_path(assigns(:request))
   end
 

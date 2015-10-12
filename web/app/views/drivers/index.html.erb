@@ -5,13 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Apellido</th>
+      <th>Name</th>
       <th>Dni</th>
-      <th>Sexo</th>
-      <th>Formapago</th>
-      <th>Licencia</th>
-      <th>Tarjeta</th>
+      <th>Nlic</th>
+      <th>Fpago</th>
       <th>Email</th>
       <th>Password</th>
       <th colspan="3"></th>
@@ -21,13 +18,10 @@
   <tbody>
     <% @drivers.each do |driver| %>
       <tr>
-        <td><%= driver.nombre %></td>
-        <td><%= driver.apellido %></td>
+        <td><%= driver.name %></td>
         <td><%= driver.dni %></td>
-        <td><%= driver.sexo %></td>
-        <td><%= driver.formapago %></td>
-        <td><%= driver.licencia %></td>
-        <td><%= driver.tarjeta %></td>
+        <td><%= driver.nlic %></td>
+        <td><%= driver.fpago %></td>
         <td><%= driver.email %></td>
         <td><%= driver.password %></td>
         <td><%= link_to 'Show', driver %></td>

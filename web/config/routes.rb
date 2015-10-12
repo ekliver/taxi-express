@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
-  resources :vehicles
+  
   resources :requests
-  resources :drivers
+  resources :favorites
+  resources :vehicles
+  resources :routes
   resources :passengers
+  resources :drivers
+  resources :articles do
+    resources :comments, only: [:create, :destroy, :update]
+  end
+  
   devise_for :users
-  get 'wellcome/index'
   root 'wellcome#index'
-  resources :articles
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,1 +1,1 @@
-json.extract! @passenger, :id, :nombre, :apellido, :dni, :sexo, :formapago, :tarjeta, :email, :password, :created_at, :updated_at
+json.extract! @passenger, :id, :name, :dni, :genero, :email, :password, :created_at, :updated_at

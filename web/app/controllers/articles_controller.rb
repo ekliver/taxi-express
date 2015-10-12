@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 #before_action :validate_user, except: [:show,:index]
-before_action :authenticate_user!, only: [:create,:new]
-before_action :set_article, except: [:index,:new,:create]
+before_action :authenticate_user!, only: [:show,:new]
+before_action :set_article , except: [:index,:new,:create]
     #GET /articles
     def index
         #@articles variable gloval
@@ -10,7 +10,7 @@ before_action :set_article, except: [:index,:new,:create]
     #GET /articles/:id
     def show
         @article.update_visits_count
-        
+        @comment=Comment.new
     end
     #GET /articles/new
     def new
@@ -53,8 +53,9 @@ before_action :set_article, except: [:index,:new,:create]
     private
     
     def set_article
-        @article=Article.find(params[:id]) 
+        @article = Article.find(params[:id]) 
     end
+    
     def validate_user
        redirect_to new_user_session_path,notice: "Necesitas iniciar sesión" 
     end

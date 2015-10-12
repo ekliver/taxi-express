@@ -1,48 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Passenger:</strong>
-  <%= @request.passenger %>
+  <strong>Direccion inicial:</strong>
+  <%= @request.direcini %>
 </p>
 
 <p>
-  <strong>Distini:</strong>
-  <%= @request.distini %>
+  <strong>Direccion final:</strong>
+  <%= @request.direcfin %>
 </p>
 
 <p>
-  <strong>Distfin:</strong>
-  <%= @request.distfin %>
+  <strong>Nro Pasajeros:</strong>
+  <%= @request.npass %>
 </p>
 
 <p>
-  <strong>Monto:</strong>
-  <%= @request.monto %>
-</p>
-
-<p>
-  <strong>Direcexini:</strong>
-  <%= @request.direcexini %>
-</p>
-
-<p>
-  <strong>Directexfin:</strong>
-  <%= @request.directexfin %>
-</p>
-
-<p>
-  <strong>Pasajeros:</strong>
-  <%= @request.pasajeros %>
-</p>
-
-<p>
-  <strong>Tipovehiculo:</strong>
-  <%= @request.tipovehiculo %>
-</p>
-
-<p>
-  <strong>Tipopago:</strong>
-  <%= @request.tipopago %>
+  <strong>Forma de pago:</strong>
+  <%= @request.fpago %>
 </p>
 
 <p>
@@ -50,5 +25,29 @@
   <%= @request.estado %>
 </p>
 
-<%= link_to 'Edit', edit_request_path(@request) %> |
-<%= link_to 'Back', requests_path %>
+<p>
+  <strong>Calificacion:</strong>
+  <%= @request.calif %>
+</p>
+
+<p>
+  <strong>Pasajero:</strong>
+  <%= @request.passenger.name %>
+</p>
+
+<p>
+  <strong>Chofer:</strong>
+  <%= @request.driver.name %>
+</p>
+
+<p>
+  <strong>Ruta:</strong>
+  <%= @request.route.rutacon %>
+</p>
+
+<p>
+  <strong>Ruta:</strong>
+  <%= @request.route.precio %>
+</p>
+<%= link_to 'Editar', edit_request_path(@request) %> |
+<%= link_to 'Ver Lista de Pedindos', requests_path %>

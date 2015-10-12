@@ -1,1 +1,1 @@
-json.extract! @driver, :id, :nombre, :apellido, :dni, :sexo, :formapago, :licencia, :tarjeta, :email, :password, :created_at, :updated_at
+json.extract! @driver, :id, :name, :dni, :nlic, :fpago, :email, :password, :created_at, :updated_at

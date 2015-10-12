@@ -12,32 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :apellido %><br>
-    <%= f.text_field :apellido %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :dni %><br>
     <%= f.text_field :dni %>
   </div>
   <div class="field">
-    <%= f.label :sexo %><br>
-    <%= f.text_field :sexo %>
+    <%= f.label :nlic %><br>
+    <%= f.text_field :nlic %>
   </div>
   <div class="field">
-    <%= f.label :formapago %><br>
-    <%= f.text_field :formapago %>
-  </div>
-  <div class="field">
-    <%= f.label :licencia %><br>
-    <%= f.text_field :licencia %>
-  </div>
-  <div class="field">
-    <%= f.label :tarjeta %><br>
-    <%= f.text_field :tarjeta %>
+    <%= f.label :fpago %><br>
+    <%= select_tag("driver[fpago]", options_for_select(options_for_select([['Contado', 'Contado'], ['Tarjeta de Credito', 'Tarjeta de Credito']]))) %>
   </div>
   <div class="field">
     <%= f.label :email %><br>

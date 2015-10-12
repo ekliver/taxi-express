@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151006072217) do
+ActiveRecord::Schema.define(version: 20151011075345) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -24,27 +24,42 @@ ActiveRecord::Schema.define(version: 20151006072217) do
 
   add_index "articles", ["user_id"], name: "index_articles_on_user_id"
 
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "article_id"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["article_id"], name: "index_comments_on_article_id"
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
   create_table "drivers", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "apellido"
+    t.string   "name"
     t.string   "dni"
-    t.string   "sexo"
-    t.string   "formapago"
-    t.string   "licencia"
-    t.string   "tarjeta"
+    t.string   "nlic"
+    t.string   "fpago"
     t.string   "email"
     t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "passenger_id"
+    t.integer  "route_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "favorites", ["passenger_id"], name: "index_favorites_on_passenger_id"
+  add_index "favorites", ["route_id"], name: "index_favorites_on_route_id"
+
   create_table "passengers", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "apellido"
+    t.string   "name"
     t.string   "dni"
-    t.string   "sexo"
-    t.string   "formapago"
-    t.string   "tarjeta"
+    t.string   "genero"
     t.string   "email"
     t.string   "password"
     t.datetime "created_at", null: false
@@ -52,21 +67,29 @@ ActiveRecord::Schema.define(version: 20151006072217) do
   end
 
   create_table "requests", force: :cascade do |t|
-    t.integer  "passenger_id"
-    t.string   "distini"
-    t.string   "distfin"
-    t.integer  "monto"
-    t.string   "direcexini"
-    t.string   "directexfin"
-    t.integer  "pasajeros"
-    t.string   "tipovehiculo"
-    t.string   "tipopago"
+    t.string   "direcini"
+    t.string   "direcfin"
+    t.integer  "npass"
+    t.string   "fpago"
     t.string   "estado"
+    t.integer  "calif"
+    t.integer  "passenger_id"
+    t.integer  "driver_id"
+    t.integer  "route_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
+  add_index "requests", ["driver_id"], name: "index_requests_on_driver_id"
   add_index "requests", ["passenger_id"], name: "index_requests_on_passenger_id"
+  add_index "requests", ["route_id"], name: "index_requests_on_route_id"
+
+  create_table "routes", force: :cascade do |t|
+    t.string   "rutacon"
+    t.integer  "precio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -91,15 +114,15 @@ ActiveRecord::Schema.define(version: 20151006072217) do
   create_table "vehicles", force: :cascade do |t|
     t.string   "marca"
     t.string   "modelo"
-    t.string   "ano"
+    t.integer  "ano"
     t.string   "color"
-    t.string   "pasajeros"
+    t.integer  "npass"
     t.string   "tipo"
-    t.integer  "passenger_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "driver_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "vehicles", ["passenger_id"], name: "index_vehicles_on_passenger_id"
+  add_index "vehicles", ["driver_id"], name: "index_vehicles_on_driver_id"
 
 end

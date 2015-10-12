@@ -1,0 +1,26 @@
+<%= form_for(@favorite) do |f| %>
+  <% if @favorite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@favorite.errors.count, "error") %> prohibited this favorite from being saved:</h2>
+
+      <ul>
+      <% @favorite.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :passenger_id %><br>
+    <%= f.collection_select :passenger_id, Passenger.all, :id,:name %>
+  </div>
+  <div class="field">
+    <%= f.label :route_id %><br>
+    
+    <%= f.collection_select :route_id, Route.all, :id,:rutacon %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Registrar", class: "btn be-red  white"%>
+  </div>
+<% end %>

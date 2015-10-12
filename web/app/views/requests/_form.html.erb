@@ -12,44 +12,40 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :direcini %><br>
+    <%= f.text_field :direcini %>
+  </div>
+  <div class="field">
+    <%= f.label :direcfin %><br>
+    <%= f.text_field :direcfin %>
+  </div>
+  <div class="field">
+    <%= f.label :npass %><br>
+    <%= f.number_field :npass %>
+  </div>
+  <div class="field">
+    <%= f.label :fpago %><br>
+    <%= select_tag("request[fpago]", options_for_select(options_for_select([['Contado', 'Contado']]))) %>
+  </div>
+  <div class="field">
+    <%= f.label :estado  %><br>
+        <%= select_tag("request[estado]", options_for_select(options_for_select([['Pendiente', 'Pendiente'],['Asignado', 'Asignado'],['Realizado', 'Realizado']]))) %>
+  </div>
+  <div class="field">
+    <%= f.label :calif  %><br>
+    <%= f.number_field :calif %>
+  </div>
+  <div class="field">
     <%= f.label :passenger_id %><br>
-    <%= f.text_field :passenger_id %>
+    <%= f.collection_select :passenger_id, Passenger.all, :id,:name %>
   </div>
   <div class="field">
-    <%= f.label :distini %><br>
-    <%= f.text_field :distini %>
+    <%= f.label :driver_id %><br>
+    <%= f.collection_select :driver_id, Driver.all, :id,:name %>
   </div>
   <div class="field">
-    <%= f.label :distfin %><br>
-    <%= f.text_field :distfin %>
-  </div>
-  <div class="field">
-    <%= f.label :monto %><br>
-    <%= f.number_field :monto %>
-  </div>
-  <div class="field">
-    <%= f.label :direcexini %><br>
-    <%= f.text_field :direcexini %>
-  </div>
-  <div class="field">
-    <%= f.label :directexfin %><br>
-    <%= f.text_field :directexfin %>
-  </div>
-  <div class="field">
-    <%= f.label :pasajeros %><br>
-    <%= f.number_field :pasajeros %>
-  </div>
-  <div class="field">
-    <%= f.label :tipovehiculo %><br>
-    <%= f.text_field :tipovehiculo %>
-  </div>
-  <div class="field">
-    <%= f.label :tipopago %><br>
-    <%= f.text_field :tipopago %>
-  </div>
-  <div class="field">
-    <%= f.label :estado %><br>
-    <%= f.text_field :estado %>
+    <%= f.label :route_id %><br>
+    <%= f.collection_select :route_id, Route.all, :id,:rutacon %>
   </div>
   <div class="actions">
     <%= f.submit %>

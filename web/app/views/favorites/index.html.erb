@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Favorites</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ruta</th>
+      <th>Pasajero</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorites.each do |favorite| %>
+      <tr>
+        <td><%= favorite.route.rutacon %></td>
+        <td><%= favorite.passenger.name %></td>
+        
+        <td><%= link_to 'Ver', favorite %></td>
+        <td><%= link_to 'Editar', edit_favorite_path(favorite) %></td>
+        <td><%= link_to 'Eliminar', favorite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Ruta Favorita', new_favorite_path %>

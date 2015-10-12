@@ -5,16 +5,17 @@
         <h1 class="no-margin" id="logo">::>>TAXI EXPRESS</h1>
       </li>
       <li class="col-md">
-        <%= link_to "Inicio", root_path %>
+        <%= link_to "Pedidos",  :controller => "requests", :action => "new" %> 
+        
       </li>
       <li class="col-md">
-        <%= link_to "Pedidos", root_path %>
+        <%= link_to "Favoritos", favorites_path %>
       </li>
       <li class="col-md">
-        <%= link_to "Plop", root_path %>
+        <%= link_to "Historial",  requests_path  %>
       </li>
       <li class="col-md">
-        <%= link_to "Agree", root_path %>
+        <%= link_to "Solicitudes",  requests_path %>
       </li>
       <% if user_signed_in? %>
       <li class="col-md">

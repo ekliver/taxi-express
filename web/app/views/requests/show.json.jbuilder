@@ -1,1 +1,1 @@
-json.extract! @request, :id, :passenger_id, :distini, :distfin, :monto, :direcexini, :directexfin, :pasajeros, :tipovehiculo, :tipopago, :estado, :created_at, :updated_at
+json.extract! @request, :id, :direcini, :direcfin, :npass, :fpago, :estado, :calif, :passenger_id, :driver_id, :route_id, :created_at, :updated_at

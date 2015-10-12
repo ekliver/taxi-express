@@ -3,17 +3,17 @@
 one:
   marca: MyString
   modelo: MyString
-  ano: MyString
+  ano: 1
   color: MyString
-  pasajeros: MyString
+  npass: 1
   tipo: MyString
-  passenger_id: 
+  driver_id: 
 
 two:
   marca: MyString
   modelo: MyString
-  ano: MyString
+  ano: 1
   color: MyString
-  pasajeros: MyString
+  npass: 1
   tipo: MyString
-  passenger_id: 
+  driver_id: 

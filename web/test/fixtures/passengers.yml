@@ -1,21 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nombre: MyString
-  apellido: MyString
+  name: MyString
   dni: MyString
-  sexo: MyString
-  formapago: MyString
-  tarjeta: MyString
+  genero: MyString
   email: MyString
   password: MyString
 
 two:
-  nombre: MyString
-  apellido: MyString
+  name: MyString
   dni: MyString
-  sexo: MyString
-  formapago: MyString
-  tarjeta: MyString
+  genero: MyString
   email: MyString
   password: MyString

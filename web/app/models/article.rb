@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
     belongs_to :user
+    has_many :comments
     #la tabla=> articles
     #campos => Article.text
     #Escribir metodos

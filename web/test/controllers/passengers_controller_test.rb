@@ -18,7 +18,7 @@ class PassengersControllerTest < ActionController::TestCase
 
   test "should create passenger" do
     assert_difference('Passenger.count') do
-      post :create, passenger: { apellido: @passenger.apellido, dni: @passenger.dni, email: @passenger.email, formapago: @passenger.formapago, nombre: @passenger.nombre, password: @passenger.password, sexo: @passenger.sexo, tarjeta: @passenger.tarjeta }
+      post :create, passenger: { dni: @passenger.dni, email: @passenger.email, genero: @passenger.genero, name: @passenger.name, password: @passenger.password }
     end
 
     assert_redirected_to passenger_path(assigns(:passenger))
@@ -35,7 +35,7 @@ class PassengersControllerTest < ActionController::TestCase
   end
 
   test "should update passenger" do
-    patch :update, id: @passenger, passenger: { apellido: @passenger.apellido, dni: @passenger.dni, email: @passenger.email, formapago: @passenger.formapago, nombre: @passenger.nombre, password: @passenger.password, sexo: @passenger.sexo, tarjeta: @passenger.tarjeta }
+    patch :update, id: @passenger, passenger: { dni: @passenger.dni, email: @passenger.email, genero: @passenger.genero, name: @passenger.name, password: @passenger.password }
     assert_redirected_to passenger_path(assigns(:passenger))
   end
 

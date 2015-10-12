@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Requests</h1>
+<h1>Lista de pedidos</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Passenger</th>
-      <th>Distini</th>
-      <th>Distfin</th>
-      <th>Monto</th>
-      <th>Direcexini</th>
-      <th>Directexfin</th>
-      <th>Pasajeros</th>
-      <th>Tipovehiculo</th>
-      <th>Tipopago</th>
+      <th>Direccion inicial</th>
+      <th>Direccion Destino</th>
+      <th>Nro Pasajeros</th>
+      <th>Forma de Pago</th>
       <th>Estado</th>
+      <th>Calificacion</th>
+      <th>Pasajero</th>
+      <th>Chofer</th>
+      <th>Ruta</th>
+      <th>Precio</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,16 +22,16 @@
   <tbody>
     <% @requests.each do |request| %>
       <tr>
-        <td><%= request.passenger %></td>
-        <td><%= request.distini %></td>
-        <td><%= request.distfin %></td>
-        <td><%= request.monto %></td>
-        <td><%= request.direcexini %></td>
-        <td><%= request.directexfin %></td>
-        <td><%= request.pasajeros %></td>
-        <td><%= request.tipovehiculo %></td>
-        <td><%= request.tipopago %></td>
+        <td><%= request.direcini %></td>
+        <td><%= request.direcfin %></td>
+        <td><%= request.npass %></td>
+        <td><%= request.fpago %></td>
         <td><%= request.estado %></td>
+        <td><%= request.calif %></td>
+        <td><%= request.passenger.name %></td>
+        <td><%= request.driver.name %></td>
+        <td><%= request.route.rutacon %></td>
+        <td><%= request.route.precio %></td>
         <td><%= link_to 'Show', request %></td>
         <td><%= link_to 'Edit', edit_request_path(request) %></td>
         <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -42,4 +42,4 @@
 
 <br>
 
-<%= link_to 'New Request', new_request_path %>
+<%= link_to 'Nuevo Pedido', new_request_path %>
